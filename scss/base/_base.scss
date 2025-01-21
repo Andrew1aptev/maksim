@@ -1,0 +1,25 @@
+body {
+    background-color: rgba(232, 186, 177, 45%);
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+}
+
+.button-all {
+    max-width: 430px;
+    border: none;
+    border-radius: 20px;
+    height: 125px;
+    padding-inline: 51px;
+    background-color: var(--white);
+    font-weight: 700;
+    font-size: 1.875rem;
+    /* 30px */
+    align-self: center;
+    cursor: pointer;
+    transition: scale .2s ease;
+}
+
+.button-all:active {
+    scale: 0.9;
+}

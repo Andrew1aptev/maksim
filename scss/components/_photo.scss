@@ -1,0 +1,28 @@
+.photo {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        max-width: 1005px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+        row-gap: 40px;
+        justify-items: center;
+        margin-bottom: 70px;
+    }
+
+    &__image:nth-child(3n) {
+        grid-column: span 2;
+        width: 100%;
+    }
+
+    &__button {
+        align-self: center;
+    }
+}

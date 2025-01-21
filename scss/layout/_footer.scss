@@ -1,0 +1,113 @@
+.footer {
+    background-color: #232323;
+    padding-top: 30px;
+
+    &__container {}
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 55px;
+    }
+
+    &__logo {
+        align-self: center;
+    }
+
+    &__nav {
+        order: 3;
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    &__nav-item {}
+
+    &__nav-link {
+        font-size: 1.875rem;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__socials {
+        align-self: center;
+    }
+
+    &__socials-title {
+        color: #ffffff;
+        font-size: 1.875rem;
+        /* 30px */
+        font-weight: 700;
+        color: var(--white);
+    }
+
+    &__item {}
+
+    &__link {
+        display: flex;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 70px;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+        transition: scale .2s ease, stroke .2s ease;
+    }
+
+    &__link:hover {
+        scale: 1.1;
+    }
+
+    &__link--vk:hover svg path {
+        stroke: #ffffff;
+        fill: rgb(70, 70, 255);
+    }
+
+    &__link--ig:hover svg path {
+        stroke: #ffffff;
+        fill: rgb(185, 72, 255);
+    }
+
+    &__link--yt:hover svg path {
+        stroke: #ffffff;
+        fill: rgb(255, 0, 0);
+    }
+
+    &__link--tg:hover svg path {
+        stroke: #ffffff;
+        fill: rgb(0, 162, 255);
+    }
+
+    &__text {
+        padding-top: 10px;
+        display: block;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: #ffffff;
+        position: relative;
+    }
+
+    &__text::before {
+        content: "";
+        height: 1px;
+        width: 100vw;
+        top: 0;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 50%);
+        background-color: #ffffff;
+        position: absolute;
+    }
+
+    &__text span {
+        font-size: .875rem;
+    }
+}

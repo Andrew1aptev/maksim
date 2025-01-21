@@ -1,0 +1,52 @@
+.pages {
+
+    &__container {
+        max-width: 1326px;
+        margin: 0 auto;
+        padding-inline: 15px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__page {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+    }
+
+    &__link {
+        font-family: var(--second-family);
+        font-size: 8rem;
+        /* 128px */
+        font-weight: 700;
+        color: #ffffff;
+        text-decoration: none;
+        background: linear-gradient(currentColor 0 0) bottom /var(--d, 0) 3px no-repeat;
+        transition: 0.5s;
+    }
+
+    &__link:hover {
+        --d: 100%;
+    }
+
+    &__page--concerts {
+        background-image: url("../images/src/concerts/2.webp");
+    }
+
+    &__page--news {
+        background-image: url("../images/src/news/3.webp");
+
+    }
+
+    &__page--photo {
+        background-image: url("../images/src/photo/4.png");
+    }
+
+    &__page--contacts {
+        background-image: url("../images/src/contacts/6.png");
+
+    }
+}

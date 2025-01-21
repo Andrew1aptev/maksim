@@ -1,0 +1,26 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background: #232323;
+    transition: background .2s ease-in;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    &--transparent {
+        background: transparent;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.header-scroll {
+    transition: background .2s ease-in;
+    background: #232323;
+}

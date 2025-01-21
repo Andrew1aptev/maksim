@@ -1,0 +1,133 @@
+.contacts {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &__container {}
+
+    &__title {
+        font-size: 2.5rem;
+        color: var(--white);
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__managers {
+        display: flex;
+        justify-content: space-between;
+        gap: 46px;
+        margin-bottom: 100px;
+    }
+
+    &__manager {
+        background-color: var(--light-black);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ffffff;
+        border-radius: 20px;
+        padding: 40px 35px;
+    }
+
+    &__post {
+        font-size: 2.1875rem;
+        font-weight: 800;
+        color: var(--white);
+        margin-bottom: 20px;
+    }
+
+    &__name {
+        font-size: 1.875rem;
+        color: var(--white);
+        margin-bottom: 40px;
+    }
+
+    &__line {
+        height: 1px;
+        width: 100%;
+        background-color: var(--white);
+        margin-bottom: 40px;
+    }
+
+    &__phone,
+    &__email {
+        color: var(--white);
+        text-decoration: none;
+        font-size: 1.875rem;
+        transition: color .2s ease;
+        background: linear-gradient(currentColor 0 0) bottom /var(--d, 0) 3px no-repeat;
+        transition: 0.5s;
+    }
+
+    &__phone:hover,
+    &__email:hover {
+        --d: 100%;
+    }
+
+    &__socials {
+        padding: 30px 40px;
+        border: 1px solid var(--white);
+        border-radius: 20px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &__list-item {}
+
+    &__list-link {
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        background-color: var(--light-black);
+        padding: 14px;
+        min-width: 250px;
+        color: var(--white);
+        gap: 20px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.5625rem;
+        transition: color .2s ease;
+    }
+
+    &__list-link svg path {
+        transition: stroke .2s ease, fill .2s ease;
+    }
+
+    &__list-link--vk:hover {
+        color: rgb(70, 70, 255);
+    }
+
+    &__list-link--vk:hover svg path {
+        stroke: #ffffff;
+        fill: rgb(70, 70, 255);
+    }
+
+    &__list-link--instagram:hover {
+        color: rgb(204, 81, 204);
+    }
+
+    &__list-link--instagram:hover svg path {
+        stroke: #ffffff;
+        fill: rgb(204, 81, 204);
+    }
+
+    &__list-link--youtube:hover {
+        color: var(--red);
+    }
+
+    &__list-link--youtube:hover svg path {
+        stroke: #ffffff;
+        fill: var(--red);
+    }
+
+    &__list-link--telegram:hover {
+        color: rgb(0, 162, 255);
+    }
+
+    &__list-link--telegram:hover svg path {
+        stroke: #ffffff;
+        fill: rgb(0, 162, 255);
+    }
+}

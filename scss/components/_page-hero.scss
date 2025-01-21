@@ -1,0 +1,75 @@
+.page-hero {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 630px;
+
+    &__container {}
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 630px;
+        flex-direction: column;
+    }
+
+    &__content--concerts {}
+
+    &__title {
+        font-family: var(--second-family);
+        font-size: 7.6rem;
+        /* 128px */
+        font-weight: 700;
+        color: var(--white);
+        text-align: center;
+    }
+
+    &__title--concerts {
+        margin-bottom: 83px;
+    }
+
+    &--concerts {
+        background-image: url("./../images/src/page-concerts/concerts-bg.webp");
+    }
+
+    &--news {
+        background-image: url("./../images/src/page-news/news-bg.png");
+    }
+
+    &--contacts {
+        background-image: url("./../../images/src/page-contacts/contacts-bg.png");
+    }
+
+    &--photo {
+        background-image: url("./../../images/src/page-photo/photo-bg.png");
+    }
+
+    &__buttons {
+        position: relative;
+    }
+
+    &__button {
+        position: absolute;
+        border-radius: 20px;
+        height: 100px;
+        border: none;
+        font-size: 1.25rem;
+        /* 20px */
+        font-weight: 700;
+        padding-inline: 40px;
+        cursor: pointer;
+    }
+
+    &__button--white {
+        left: -50%;
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+    &__button--black {
+        right: 50%;
+        color: var(--white);
+        background-color: var(--light-black);
+    }
+}
