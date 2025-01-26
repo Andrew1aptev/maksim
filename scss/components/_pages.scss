@@ -19,7 +19,7 @@
 
     &__link {
         font-family: var(--second-family);
-        font-size: 8rem;
+        font-size: clamp(2.5rem, 0.9286rem + 7.8571vw, 8rem);
         /* 128px */
         font-weight: 700;
         color: #ffffff;

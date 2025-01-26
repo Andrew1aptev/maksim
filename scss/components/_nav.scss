@@ -1,23 +1,9 @@
 .nav {
-
-    &__list {
-        display: flex;
-        gap: 36px;
-    }
-
-    &__item {}
-
     &__link {
-        color: #ffffff;
-        font-size: 1.875rem;
-        /* 30px */
         font-weight: 700;
+        color: var(--white);
+        font-size: clamp(1.25rem, 1.0714rem + 0.8929vw, 1.875rem); // min20px, max30px
+        /* 30px */
         text-decoration: none;
-        background: linear-gradient(currentColor 0 0) bottom /var(--d, 0) 3px no-repeat;
-        transition: 0.5s;
-    }
-
-    &__link:hover {
-        --d: 100%;
     }
 }
