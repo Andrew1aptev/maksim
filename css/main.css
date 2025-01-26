@@ -336,7 +336,7 @@ body {
 }
 .page-hero__title {
   font-family: var(--second-family);
-  font-size: 7.6rem;
+  font-size: clamp(3.125rem, 1.7321rem + 6.9643vw, 8rem);
   /* 128px */
   font-weight: 700;
   color: var(--white);
@@ -365,11 +365,17 @@ body {
   border-radius: 20px;
   height: 100px;
   border: none;
-  font-size: 1.25rem;
+  font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem);
   /* 20px */
   font-weight: 700;
   padding-inline: 40px;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .page-hero__button {
+    padding-inline: 30px;
+    height: 70px;
+  }
 }
 .page-hero__button--white {
   left: -50%;
