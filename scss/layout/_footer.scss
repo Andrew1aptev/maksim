@@ -11,6 +11,7 @@
 
         @media (max-width: 768px) {
             flex-direction: column;
+            gap: 30px;
         }
     }
 
@@ -29,6 +30,7 @@
 
         @media (max-width: 768px) {
             align-items: center;
+            gap: 20px;
         }
     }
 
@@ -36,6 +38,10 @@
 
     &__nav-link {
         font-size: 1.875rem;
+
+        @media(max-width: 768px) {
+            font-weight: 400;
+        }
     }
 
     &__list {
@@ -44,7 +50,12 @@
     }
 
     &__socials {
+
         align-self: center;
+
+        @media(max-width: 768px) {
+            order: 3;
+        }
     }
 
     &__socials-title {

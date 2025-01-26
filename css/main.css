@@ -827,6 +827,7 @@ body {
 @media (max-width: 768px) {
   .footer__wrapper {
     flex-direction: column;
+    gap: 30px;
   }
 }
 .footer__logo {
@@ -843,10 +844,16 @@ body {
 @media (max-width: 768px) {
   .footer__nav-list {
     align-items: center;
+    gap: 20px;
   }
 }
 .footer__nav-link {
   font-size: 1.875rem;
+}
+@media (max-width: 768px) {
+  .footer__nav-link {
+    font-weight: 400;
+  }
 }
 .footer__list {
   display: flex;
@@ -854,6 +861,11 @@ body {
 }
 .footer__socials {
   align-self: center;
+}
+@media (max-width: 768px) {
+  .footer__socials {
+    order: 3;
+  }
 }
 .footer__socials-title {
   color: #ffffff;
