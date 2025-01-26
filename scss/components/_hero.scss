@@ -18,18 +18,16 @@
 
     &__title {
         color: #ffffff;
-        font-size: 2.5rem;
+        font-size: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
         /* 40px */
-        line-height: 3.0256rem;
         /* 48px */
         margin-bottom: 50px;
     }
 
     &__title--large {
         color: #ffffff;
-        font-size: 7.8125rem;
+        font-size: clamp(2.25rem, 0.6071rem + 8.2143vw, 8rem);
         /* 125px */
-        line-height: 9.4375rem;
         /* 151px */
     }
 
@@ -37,7 +35,7 @@
         background-color: rgb(255, 112, 112);
         color: rgb(255, 255, 255);
         font-weight: 700;
-        font-size: 1.875rem;
+        font-size: clamp(0.9375rem, 0.6696rem + 1.3393vw, 1.875rem);
         /* 30px */
         padding-inline: 37px;
         min-height: 90px;
@@ -55,3 +53,9 @@
         scale: 0.9;
     }
 }
+
+// @media (max-width: 768px) {
+//     .hero__button {
+//         padding-inline: 27px;
+//     }
+// }

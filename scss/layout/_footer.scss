@@ -8,6 +8,10 @@
         display: flex;
         justify-content: space-between;
         padding-bottom: 55px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 
     &__logo {
@@ -22,6 +26,10 @@
         display: flex;
         flex-direction: column;
         gap: 0;
+
+        @media (max-width: 768px) {
+            align-items: center;
+        }
     }
 
     &__nav-item {}
