@@ -676,39 +676,59 @@ body {
 }
 .contacts__managers {
   display: flex;
-  justify-content: space-between;
-  gap: 46px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  --gap: 10px;
+  --elements: 2;
+  gap: var(--gap);
+}
+@media (max-width: 1028px) {
+  .contacts__managers {
+    --elements: 1;
+  }
 }
 .contacts__manager {
-  background-color: var(--light-black);
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   border: 1px solid #ffffff;
   border-radius: 20px;
-  padding: 40px 35px;
+  padding: 30px;
+  flex-wrap: wrap;
+  width: calc((100% - (var(--elements) - 1) * var(--gap)) / (var(--elements)));
+  min-height: 264px;
+}
+@media (max-width: 1028px) {
+  .contacts__manager {
+    padding: 15px;
+  }
 }
 .contacts__post {
-  font-size: 2.1875rem;
-  font-weight: 800;
-  color: var(--white);
-  margin-bottom: 20px;
+  font-size: clamp(1.5625rem, 1.4732rem + 0.4464vw, 1.875rem);
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+.contacts__post::first-letter {
+  text-transform: uppercase;
 }
 .contacts__name {
   font-size: 1.875rem;
-  color: var(--white);
-  margin-bottom: 40px;
+  color: var(--black);
+  margin-bottom: 10px;
+  text-transform: capitalize;
 }
 .contacts__line {
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background-color: var(--white);
-  margin-bottom: 40px;
+  background-color: var(--light-black);
+  margin-bottom: 10px;
 }
 .contacts__phone, .contacts__email {
-  color: var(--white);
+  color: var(--red);
   text-decoration: none;
-  font-size: 1.875rem;
+  font-size: clamp(1.25rem, 1.0714rem + 0.8929vw, 1.875rem);
   transition: color 0.2s ease;
   background: linear-gradient(currentColor 0 0) bottom/var(--d, 0) 3px no-repeat;
   transition: 0.5s;
@@ -721,10 +741,21 @@ body {
   border: 1px solid var(--white);
   border-radius: 20px;
 }
+@media (max-width: 1028px) {
+  .contacts__socials {
+    padding: 15px;
+  }
+}
 .contacts__list {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
+}
+@media (max-width: 1028px) {
+  .contacts__list {
+    gap: 10px;
+  }
 }
 .contacts__list-link {
   border-radius: 20px;

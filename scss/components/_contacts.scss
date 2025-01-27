@@ -13,45 +13,64 @@
 
     &__managers {
         display: flex;
-        justify-content: space-between;
-        gap: 46px;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+        --gap: 10px;
+        --elements: 2;
+        gap: var(--gap);
+
+        @media (max-width: 1028px) {
+            --elements: 1;
+        }
     }
 
     &__manager {
-        background-color: var(--light-black);
+        background-color: var(--white);
         display: flex;
         flex-direction: column;
+        justify-content: center;
         border: 1px solid #ffffff;
         border-radius: 20px;
-        padding: 40px 35px;
+        padding: 30px;
+        flex-wrap: wrap;
+        width: calc((100% - (var(--elements) - 1) * var(--gap)) / (var(--elements)));
+        min-height: 264px;
+
+        @media(max-width: 1028px) {
+            padding: 15px;
+        }
     }
 
     &__post {
-        font-size: 2.1875rem;
-        font-weight: 800;
-        color: var(--white);
-        margin-bottom: 20px;
+        font-size: clamp(1.5625rem, 1.4732rem + 0.4464vw, 1.875rem);
+        font-weight: 700;
+        color: var(--black);
+        margin-bottom: 10px;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
     }
 
     &__name {
         font-size: 1.875rem;
-        color: var(--white);
-        margin-bottom: 40px;
+        color: var(--black);
+        margin-bottom: 10px;
+        text-transform: capitalize;
     }
 
     &__line {
-        height: 1px;
+        height: 2px;
         width: 100%;
-        background-color: var(--white);
-        margin-bottom: 40px;
+        background-color: var(--light-black);
+        margin-bottom: 10px;
     }
 
     &__phone,
     &__email {
-        color: var(--white);
+        color: var(--red);
         text-decoration: none;
-        font-size: 1.875rem;
+        font-size: clamp(1.25rem, 1.0714rem + 0.8929vw, 1.875rem);
         transition: color .2s ease;
         background: linear-gradient(currentColor 0 0) bottom /var(--d, 0) 3px no-repeat;
         transition: 0.5s;
@@ -66,12 +85,21 @@
         padding: 30px 40px;
         border: 1px solid var(--white);
         border-radius: 20px;
+
+        @media(max-width: 1028px) {
+            padding: 15px;
+        }
     }
 
     &__list {
         display: flex;
         justify-content: center;
         gap: 20px;
+        flex-wrap: wrap;
+
+        @media(max-width: 1028px) {
+            gap: 10px;
+        }
     }
 
     &__list-item {}
