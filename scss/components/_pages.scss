@@ -24,7 +24,8 @@
         font-weight: 700;
         color: #ffffff;
         text-decoration: none;
-        background: linear-gradient(currentColor 0 0) bottom /var(--d, 0) 3px no-repeat;
+        background:
+            linear-gradient(90deg, transparent, var(--red), transparent) bottom /var(--d, 0) 3px no-repeat;
         transition: 0.5s;
     }
 
@@ -33,20 +34,20 @@
     }
 
     &__page--concerts {
-        background-image: url("../images/src/concerts/2.webp");
+        background-image: url("../images/src/concerts/bg-concerts.webp");
     }
 
     &__page--news {
-        background-image: url("../images/src/news/3.webp");
+        background-image: url("../images/src/news/bg-news.webp");
 
     }
 
     &__page--photo {
-        background-image: url("../images/src/photo/4.png");
+        background-image: url("../images/src/photo/bg-photo.webp");
     }
 
     &__page--contacts {
-        background-image: url("../images/src/contacts/6.png");
+        background-image: url("../images/src/contacts/bg-contacts.webp");
 
     }
 }

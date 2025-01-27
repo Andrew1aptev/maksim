@@ -1,6 +1,6 @@
 .hero {
     position: relative;
-    background-image: url("./../images/src/hero/1.png");
+    background-image: url("./../images/src/hero/bg.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -32,7 +32,7 @@
     }
 
     &__button {
-        background-color: rgb(255, 112, 112);
+        background-color: var(--red);
         color: rgb(255, 255, 255);
         font-weight: 700;
         font-size: clamp(0.9375rem, 0.6696rem + 1.3393vw, 1.875rem);

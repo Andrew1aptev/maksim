@@ -5,5 +5,12 @@
         font-size: clamp(1.25rem, 1.0714rem + 0.8929vw, 1.875rem); // min20px, max30px
         /* 30px */
         text-decoration: none;
+        background:
+            linear-gradient(90deg, transparent, var(--red), transparent) bottom /var(--d, 0) 3px no-repeat;
+        transition: 0.5s;
+
+        &:hover {
+            --d: 100%;
+        }
     }
 }

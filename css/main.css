@@ -157,15 +157,24 @@ body {
   padding-inline: 51px;
   background-color: var(--white);
   font-weight: 700;
-  font-size: 1.875rem;
+  font-size: clamp(1.25rem, 1.0714rem + 0.8929vw, 1.875rem);
   /* 30px */
   align-self: center;
   cursor: pointer;
-  transition: scale 0.2s ease;
+  transition: background-color 0.2s ease, scale 0.2s ease, color 0.2s ease-in;
 }
-
+.button-all:hover {
+  color: var(--white);
+  background-color: var(--red);
+}
 .button-all:active {
   scale: 0.9;
+}
+@media (max-width: 768px) {
+  .button-all {
+    padding-inline: 25px;
+    height: 80px;
+  }
 }
 
 @font-face {
@@ -230,11 +239,16 @@ body {
   font-size: clamp(1.25rem, 1.0714rem + 0.8929vw, 1.875rem);
   /* 30px */
   text-decoration: none;
+  background: linear-gradient(90deg, transparent, var(--red), transparent) bottom/var(--d, 0) 3px no-repeat;
+  transition: 0.5s;
+}
+.nav__link:hover {
+  --d: 100%;
 }
 
 .hero {
   position: relative;
-  background-image: url("./../images/src/hero/1.png");
+  background-image: url("./../images/src/hero/bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -261,7 +275,7 @@ body {
   /* 151px */
 }
 .hero__button {
-  background-color: rgb(255, 112, 112);
+  background-color: var(--red);
   color: rgb(255, 255, 255);
   font-weight: 700;
   font-size: clamp(0.9375rem, 0.6696rem + 1.3393vw, 1.875rem);
@@ -302,23 +316,23 @@ body {
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
-  background: linear-gradient(currentColor 0 0) bottom/var(--d, 0) 3px no-repeat;
+  background: linear-gradient(90deg, transparent, var(--red), transparent) bottom/var(--d, 0) 3px no-repeat;
   transition: 0.5s;
 }
 .pages__link:hover {
   --d: 100%;
 }
 .pages__page--concerts {
-  background-image: url("../images/src/concerts/2.webp");
+  background-image: url("../images/src/concerts/bg-concerts.webp");
 }
 .pages__page--news {
-  background-image: url("../images/src/news/3.webp");
+  background-image: url("../images/src/news/bg-news.webp");
 }
 .pages__page--photo {
-  background-image: url("../images/src/photo/4.png");
+  background-image: url("../images/src/photo/bg-photo.webp");
 }
 .pages__page--contacts {
-  background-image: url("../images/src/contacts/6.png");
+  background-image: url("../images/src/contacts/bg-contacts.webp");
 }
 
 .page-hero {
@@ -564,6 +578,17 @@ body {
   --elements: 3;
   gap: var(--gap);
 }
+@media (max-width: 1028px) {
+  .news__cards {
+    --elements: 2;
+  }
+}
+@media (max-width: 768px) {
+  .news__cards {
+    --gap: 10px;
+    --elements: 1;
+  }
+}
 .news__card {
   display: flex;
   flex-direction: column;
@@ -576,6 +601,11 @@ body {
   min-height: 431px;
   transition: scale 0.2s ease-in, box-shadow 0.2s ease-in;
 }
+@media (max-width: 768px) {
+  .news__card {
+    padding: 5px 15px;
+  }
+}
 .news__card:hover {
   box-shadow: 10px -10px 5px 0px rgba(224, 224, 224, 0.75);
   -webkit-box-shadow: 10px -10px 5px 0px rgba(224, 224, 224, 0.75);
@@ -584,9 +614,14 @@ body {
 .news__card:active {
   scale: 0.9;
 }
+.news__card-line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--red);
+}
 .news__date {
-  font-weight: 700;
-  font-size: 1.25rem;
+  font-weight: 400;
+  font-size: 1rem;
   /* 20px */
 }
 .news__image {
@@ -599,6 +634,7 @@ body {
   /* 16px */
   font-weight: 700;
   text-decoration: none;
+  text-transform: uppercase;
   color: var(--black);
 }
 .news__link::before {
@@ -612,7 +648,20 @@ body {
 .news__description {
   font-size: 0.75rem;
   font-weight: 400;
+  color: var(--light-black);
   /* 16px */
+}
+.news__card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.news__card-themes {
+  color: var(--black);
+  text-decoration: none;
+}
+.news__card-themes :hover {
+  color: var(--red);
 }
 
 .contacts {

@@ -18,13 +18,23 @@ body {
     padding-inline: 51px;
     background-color: var(--white);
     font-weight: 700;
-    font-size: 1.875rem;
+    font-size: clamp(1.25rem, 1.0714rem + 0.8929vw, 1.875rem);
     /* 30px */
     align-self: center;
     cursor: pointer;
-    transition: scale .2s ease;
-}
+    transition: background-color .2s ease, scale .2s ease, color .2s ease-in;
 
-.button-all:active {
-    scale: 0.9;
+    &:hover {
+        color: var(--white);
+        background-color: var(--red);
+    }
+
+    &:active {
+        scale: 0.9;
+    }
+
+    @media (max-width: 768px) {
+        padding-inline: 25px;
+        height: 80px;
+    }
 }
